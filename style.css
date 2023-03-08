@@ -1,0 +1,106 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+
+body {
+  height: 100vh;
+  display: flex;
+  background: #17202A
+}
+
+
+
+.memory-game {
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+
+}
+
+.front-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 5px;
+  backface-visibility: hidden;
+}
+
+
+
+.click {
+  position: fixed;
+  font-size: 25px;
+  padding: 10px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.memory-card {
+  width: 150px;
+  height: 90px;
+  margin: 8px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, .3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform .5s;
+  background-color: #00EC96;
+  border-radius: 5%;
+  border-collapse: 10px solid black;
+  box-shadow: 0 0 2px black, 0 0 2px black, 0 0 1px #0ba9ca, 0 0 8px #0ba9ca,
+    0 0 5px #0ba9ca, 0 0 5px #0ba9ca;
+}
+
+
+
+
+.memory-card:hover {
+  /* mecacneluc mnacac kubiknerin brdum er axpers JS i vra xoraca sran el shat chem nayel))*/
+  /* top:-3px;
+  width: 155px;
+  height: 100px;  */
+  cursor: pointer;
+  background-color: #002A28;
+  color: #33FBAE;
+  border: 10px #33FBAE;
+  box-shadow: 0 0 2px #fff, 0 0 2px #fff, 0 0 10px #0ff, 0 0 1px white, 0 0 40px white, 0 0 0px white;
+}
+
+
+
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform .2s;
+}
+
+
+.memory-card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+
+
+.aClassName {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  color: white;
+  font-size: 400%;
+  padding: 20%;
+  text-align: center;
+
+}
